@@ -20,6 +20,13 @@ services:
         734adbc9-3445-4976-b841-eee79e3e7281
         3f330066-2edf-44e6-9539-98cf4e527262
       CF_SLUG: valhelsia-6
-      CF_FILE_ID: "6448193"
+      CF_FILE_ID: "6448190"
+      CF_API_KEY_FILE: /run/secrets/cf_api_key
     volumes:
       - ./data:/data
+    secrets:
+      - cf_api_key
+
+secrets:
+  cf_api_key:
+    file: cf-api-key
